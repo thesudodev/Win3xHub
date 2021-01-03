@@ -1,0 +1,28 @@
+#gradient {
+  width: 9999px;
+  height: 9999px;
+  border: 3px solid purple;
+  padding: 5px 20px; 
+  text-align: center;
+  
+  /* Webkit (Chrome and Safari) uses the percent
+   * of the <div> area to use for each color. */
+    background: -webkit-gradient(
+    linear, left top, right bottom,
+    color-stop(15%, red),
+    color-stop(14%, orange),
+    color-stop(14%, yellow),
+    color-stop(14%, green),
+    color-stop(15%, blue),
+    color-stop(14%, indigo),
+    color-stop(14%, purple)
+  );
+  
+  /* Mozilla (FireFox, IceWeasel, and IceApe) want to know when to start fading the color. */
+    background: -moz-linear-gradient(
+    top left, red 10%, orange 25%, yellow 40%, green 53%, blue 66%, indigo 80%, purple 92% );
+  
+  /* Internet Explorer uses the angle the gradient should start at. */
+    background: linear-gradient(
+    135deg, red 15%, orange 29%, yellow 43%, green 57%, blue 70%, indigo 84%, purple 100%  );  
+}
